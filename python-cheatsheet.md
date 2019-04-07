@@ -43,8 +43,7 @@ print("hello %s %d", % (name, age))	# python 2
 print("hello {} {}".format(name, age))
 print("hello" *5)
 print("There are {0} days in {1}, {2} and {3}".format(31, "January", "March", "April"))
-print("N:w
-umber {0:2} squared is {1:4}".format(2, 2 ** 2))
+print("Number {0:2} squared is {1:4}".format(2, 2 ** 2))
 print("""string split
          across
          multiple lines""")
@@ -53,7 +52,7 @@ print("""string split
 <a name="FILES"></a>
 #### FILE HANDLING
 
-```python
+```
 # file modes
 r - read (default)
 w - write
