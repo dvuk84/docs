@@ -115,13 +115,6 @@ rewind("file.txt")
 ```
 
 ```python
-# binary
-byte([age])
-age.to_bytes(2, 'big')
-e = int.from_bytes(bin_file(2), 'big'))
-```
-
-```python
 # pickle
 import pickle
 imelda = ("More Mayhem", "Imelda May", (1, "Polling the Rug"))
