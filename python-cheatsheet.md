@@ -1,4 +1,17 @@
-#### PRINTING, USER INPUT AND ARGUMENTS
+* [PRINTING, USER INPUT AND ARGUMENTS](#PRINTING)
+* [FILE HANDLING](#FILES)
+* [NAMES, VARIABLES, CODE AND FUNCTIONS](#VARS)
+* [CONDITIONS, LOOPS AND LISTS](#LOOPS)
+* [TUPLES](#TUPLES)
+* [DICTIONARIES](#DICT)
+* [SETS](#SETS)
+* [FUNCTIONS, MODULES, CLASSES AND OBJECTS](#OBJECTS)
+* [INHERITANCE](#INHERITANCE)
+* [BUILTIN MODULES](#BUILTIN)
+* [EXIT CODE](#EXIT)
+* [REFERENCE](#REFERENCE)
+
+#### PRINTING, USER INPUT AND ARGUMENTS <a name="PRINTING"></a>
 
 ```python
 from sys import argv
@@ -38,7 +51,7 @@ across
 multiple lines""")
 ```
 
-#### FILE HANDLING
+#### FILE HANDLING <a name="FILES"></a>
 
 ##### r (default), w, x, a, b, t (default), +
 
@@ -125,7 +138,7 @@ print(description)
 fruit.close()
 ```
 
-#### NAMES, VARIABLES, CODE AND FUNCTIONS
+#### NAMES, VARIABLES, CODE AND FUNCTIONS <a name="VARS"></a>
 
 ##### global variable
 ```python
@@ -171,7 +184,7 @@ howmany = cheese_and_crackers(20, 30)
 _deal_card(frame):
 ```
 
-#### CONDITIONS, LOOPS AND LISTS
+#### CONDITIONS, LOOPS AND LISTS <a name="LOOPS"></a>
 
 ##### if else
 ```python
@@ -235,7 +248,7 @@ print(" ".join(splitvar))
 print("#".join(splitvar[2:4])
 ```
 
-#### TUPLES
+#### TUPLES <a name="TUPLES"></a>
 
 ##### tuples are not immutable
 ```python
@@ -246,7 +259,7 @@ print(("abc", "b", "c", 1975))
 print(t[0])				# abc
 ```
 
-#### DICTIONARIES
+#### DICTIONARIES <a name="DICT"></a>
 
 ```python
 my_dict = {"name": "Mark", "age": 34}
@@ -317,7 +330,7 @@ both = fruit.copy()
 both.update(veg)
 ```
 
-#### SETS
+#### SETS <a name="SETS"></a>
 
 ```python
 farm_animals = { "sheep", "cow", "hen" }
@@ -340,7 +353,7 @@ print(farm_animals.union(wild_animals))
 print(farm_animals.intersection(wild_animals))
 ```
 
-#### FUNCTIONS, MODULES, CLASSES AND OBJECTS
+#### FUNCTIONS, MODULES, CLASSES AND OBJECTS <a name="OBJECTS"></a>
 
 ##### import
 ```python
@@ -389,7 +402,7 @@ def print(*args, sep=' ', end ='\n', file=none, flush=None):
 print("first", "second", 3, 4, "spam", sep=':')
 ```
 
-#### INHERITANCE
+#### INHERITANCE <a name="INHERITANCE"></a>
 
 ##### implicit inheritance
 ```python
@@ -416,7 +429,7 @@ class Child(Parent):
 TBA
 ```
 
-#### BUILTIN MODULES
+#### BUILTIN MODULES <a name="BUILTIN"></a>
 
 ##### webbrowser
 ```python
@@ -494,14 +507,14 @@ canvas.pack(side='left')
 mainWindow.mainloop()
 ```
 
-#### EXIT CODE
+#### EXIT CODE <a name="EXIT"></a>
 
 ```python
 from sys import exit
 exit(0)
 ```
 
-#### REFERENCE
+#### REFERENCE <a name="REFERENCE"></a>
 
 ##### keywords
 ```
