@@ -18,27 +18,27 @@
 from sys import argv
 ```
 
-##### argument
 ```python
+# argument
 first, second = argv
 print("This is your arg: "), second
 ```
 
-##### user input
 ```python
+# user input
 prompt = ">"
 print("What's your name?")
 like = raw_input(prompt)
 ```
 
-##### format
 ```python
+# format
 formatter = "%r %r %r"
 print formatter % ("one", "two", "three")
 ```
 
-##### printing
 ```python
+#printing
 print("hello", name, "bye")
 print("hello" + name + "bye")
 print("hello %s %d", % (name, age))	# python 2
