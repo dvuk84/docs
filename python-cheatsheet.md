@@ -11,7 +11,8 @@
 * [EXIT CODE](#EXIT)
 * [REFERENCE](#REFERENCE)
 
-#### PRINTING, USER INPUT AND ARGUMENTS <a name="PRINTING"></a>
+<a name="PRINTING"></a>
+#### PRINTING, USER INPUT AND ARGUMENTS
 
 ```python
 from sys import argv
@@ -51,7 +52,8 @@ across
 multiple lines""")
 ```
 
-#### FILE HANDLING <a name="FILES"></a>
+<a name="FILES"></a>
+#### FILE HANDLING
 
 ##### r (default), w, x, a, b, t (default), +
 
@@ -138,7 +140,8 @@ print(description)
 fruit.close()
 ```
 
-#### NAMES, VARIABLES, CODE AND FUNCTIONS <a name="VARS"></a>
+<a name="VARS"></a>
+#### NAMES, VARIABLES, CODE AND FUNCTIONS
 
 ##### global variable
 ```python
@@ -159,7 +162,6 @@ print(name[-1])
 print(name[0:6:2])	# Vra
 print("a" in name)	# True
 ```
-
 
 ##### multiple arguments
 ```python
@@ -184,7 +186,8 @@ howmany = cheese_and_crackers(20, 30)
 _deal_card(frame):
 ```
 
-#### CONDITIONS, LOOPS AND LISTS <a name="LOOPS"></a>
+<a name="LOOPS"></a>
+#### CONDITIONS, LOOPS AND LISTS
 
 ##### if else
 ```python
@@ -248,7 +251,8 @@ print(" ".join(splitvar))
 print("#".join(splitvar[2:4])
 ```
 
-#### TUPLES <a name="TUPLES"></a>
+<a name="TUPLES"></a>
+#### TUPLES
 
 ##### tuples are not immutable
 ```python
@@ -259,7 +263,8 @@ print(("abc", "b", "c", 1975))
 print(t[0])				# abc
 ```
 
-#### DICTIONARIES <a name="DICT"></a>
+<a name="DICT"></a>
+#### DICTIONARIES
 
 ```python
 my_dict = {"name": "Mark", "age": 34}
@@ -330,7 +335,8 @@ both = fruit.copy()
 both.update(veg)
 ```
 
-#### SETS <a name="SETS"></a>
+<a name="SETS"></a>
+#### SETS
 
 ```python
 farm_animals = { "sheep", "cow", "hen" }
@@ -403,7 +409,8 @@ def print(*args, sep=' ', end ='\n', file=none, flush=None):
 print("first", "second", 3, 4, "spam", sep=':')
 ```
 
-#### INHERITANCE <a name="INHERITANCE"></a>
+<a name="INHERITANCE"></a>
+#### INHERITANCE
 
 ##### implicit inheritance
 ```python
@@ -430,7 +437,8 @@ class Child(Parent):
 TBA
 ```
 
-#### BUILTIN MODULES <a name="BUILTIN"></a>
+<a name="BUILTIN"></a>
+#### BUILTIN MODULES
 
 ##### webbrowser
 ```python
@@ -508,14 +516,16 @@ canvas.pack(side='left')
 mainWindow.mainloop()
 ```
 
-#### EXIT CODE <a name="EXIT"></a>
+<a name="EXIT"></a>
+#### EXIT CODE
 
 ```python
 from sys import exit
 exit(0)
 ```
 
-#### REFERENCE <a name="REFERENCE"></a>
+<a name="REFERENCE"></a>
+#### REFERENCE
 
 ##### keywords
 ```
