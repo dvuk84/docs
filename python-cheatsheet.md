@@ -353,7 +353,8 @@ print(farm_animals.union(wild_animals))
 print(farm_animals.intersection(wild_animals))
 ```
 
-#### FUNCTIONS, MODULES, CLASSES AND OBJECTS <a name="OBJECTS"></a>
+<a name="OBJECTS"></a>
+#### FUNCTIONS, MODULES, CLASSES AND OBJECTS
 
 ##### import
 ```python
