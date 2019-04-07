@@ -140,18 +140,18 @@ fruit.close()
 <a name="VARS"></a>
 #### NAMES, VARIABLES, CODE AND FUNCTIONS
 
-##### global variable
 ```python
+# global variables
 global age
 ```
 
-##### non-local variable
 ```python
+# non-local variable
 nonlocal tab_stop
 ```
 
-##### integers and strings
 ```python
+# integers and strings
 name = "Variable"
 print(name[0:6])
 print(name[4:])
@@ -160,8 +160,8 @@ print(name[0:6:2])	# Vra
 print("a" in name)	# True
 ```
 
-##### multiple arguments
 ```python
+# multiple arguments
 def print_two(*args):
     arg1, arg2 = args
     print("arg1: %r, arg2: %r") % (arg1, arg2)
@@ -169,8 +169,8 @@ def print_two(*args):
 print_one("One", "Two")
 ```
 
-##### return value
 ```python
+# return value
 def cheese_and_crackers(count, boxes):
     print("You have %d crackers in %d boxes") % (count, boxes)
     return count + boxes
@@ -178,16 +178,16 @@ def cheese_and_crackers(count, boxes):
 howmany = cheese_and_crackers(20, 30)
 ```
 
-##### protected functions
 ```python
+# protected function
 _deal_card(frame):
 ```
 
 <a name="LOOPS"></a>
 #### CONDITIONS, LOOPS AND LISTS
 
-##### if else
 ```python
+# if else
 if one < two:
     print("do this")
 elif two > one:
@@ -196,8 +196,8 @@ else:
     print("don't know what to do")
 ```
 
-##### fop loop and lists
 ```python
+# for loop
 my_list = ['one', 'two', 'three']
 for i in my_list:
     print("element: %s") % i
@@ -207,14 +207,14 @@ for i in range(0, 6):
     my_list.append(i)
 ```
 
-##### while loop
 ```python
+# while loop
 while i < 6:
     print("fourth element: %d") % i[3]
 ```
 
-##### iterators
 ```python
+# iterators
 string = "1234567890"
 for char in iter(string):
     print(char)
@@ -225,16 +225,16 @@ for i in range(0, len(string)):
     print(next_item)
 ```
 
-##### range
 ```python
+# range
 decimals = range(0, 10)
 my_range = decimals[::2]
 
 print(list(range(0, 5, 2)))
 ```
 
-##### traverse a list
 ```python
+# traverse a list
 myvar = "This is a sentence"
 myarray = ["one", "two"]
 splitvar = myvar.split(' ')
@@ -251,8 +251,8 @@ print("#".join(splitvar[2:4])
 <a name="TUPLES"></a>
 #### TUPLES
 
-##### tuples are not immutable
 ```python
+# tuple
 t = "abc", "b", "c", 1975
 t2 = ("a", "b", ("d", "e"))
 print(t)
@@ -264,6 +264,7 @@ print(t[0])				# abc
 #### DICTIONARIES
 
 ```python
+# dictionary
 my_dict = {"name": "Mark", "age": 34}
 print(my_dict["name"])
 
@@ -281,26 +282,26 @@ states = [
 print(states["OR"])
 ```
 
-##### get element
 ```python
+# get element
 input_string = my_dict.get(input("Enter: "), "Error: Element not found")
 ```
 
-##### join() instead of concatenation with +
 ```python
+# join() instead of concatenation with +
 mylist = ["a", "b", "c"]
 for i in mylist:
     new_string = ", ".join(mylist)
 ```
 
-##### create a list of keys from a dictionary
 ```python
+# create a list of keys from a dictionary
 ordered_keys = list(states.keys())
 ordered_keys.sort()
 ```
 
-##### convert dictionary to a tuple
 ```python
+# convert dictionary to a tuple
 f_tuple = tuple(states.items())
 print(f_tuple)
 
@@ -309,14 +310,14 @@ for state in f_tuple:
     print(key, val)
 ```
 
-##### items() with key and value tuples
 ```python
+# items() with key and value tuples
 for key, val in fruit.items():
     print(key, val)
 ```
 
-##### merging dictionaries
 ```python
+# merging dictionaries
 fruit = { "orange": "a sweet citrius fruit",
           "apple": "good for making cider" }
 
@@ -326,8 +327,8 @@ veg = {"cabbage": "every child's favourite",
 veg.update(fruit)
 ```
 
-##### copying instead of modying the current dictionary
 ```python
+# copying instead of modying the current dictionary
 both = fruit.copy()
 both.update(veg)
 ```
@@ -336,6 +337,7 @@ both.update(veg)
 #### SETS
 
 ```python
+# set
 farm_animals = { "sheep", "cow", "hen" }
 wild_animals = set(["lion", "tiger", "sheep"])
 empty_set = set()
@@ -350,8 +352,8 @@ farm_animals.add("horse")
 wild_animals.add("horse")
 ```
 
-##### union and intersection
 ```python
+# union and intersection
 print(farm_animals.union(wild_animals))
 print(farm_animals.intersection(wild_animals))
 ```
@@ -359,14 +361,14 @@ print(farm_animals.intersection(wild_animals))
 <a name="OBJECTS"></a>
 #### FUNCTIONS, MODULES, CLASSES AND OBJECTS
 
-##### import
 ```python
+# import
 from turtle import forward, done
 from turtle import *
 ```
 
-##### this goes in my_module.py
 ```python
+# my_module.py
 def apple():
     print("I AM APPLES")
 
@@ -376,6 +378,7 @@ my_module.apple()
 
 ##### class
 ```python
+# class
 class MyClass(object):
     def __init__(self):
         self.tangerine = "And now a thousand years between"
@@ -384,8 +387,8 @@ class MyClass(object):
         print("I AM APPLES")
 ```
 
-##### another example of a class
 ```python
+# another example of a class
 class Song(object):
     def __init__(self, lyrics):
         self.lyrics = lyrics
@@ -397,8 +400,8 @@ happy_bday = Song(["Happy birthday to you"])
 happy_bday.sing_me_a_song()
 ```
 
-##### arguments
 ```python
+# arguments
 def print(*args, sep=' ', end ='\n', file=none, flush=None):
     for arg in args:
         print(arg)
@@ -409,8 +412,8 @@ print("first", "second", 3, 4, "spam", sep=':')
 <a name="INHERITANCE"></a>
 #### INHERITANCE
 
-##### implicit inheritance
 ```python
+# implicit inheritance
 class Parent(object):
     def implicit(self):
       print("PARENT implicit()")
@@ -429,22 +432,22 @@ class Child(Parent):
       print("CHILD override()")
 ```
 
-##### super
 ```python
+# super
 TBA
 ```
 
 <a name="BUILTIN"></a>
 #### BUILTIN MODULES
 
-##### webbrowser
 ```python
+# webbrowser
 import webbrowser
 webbrowser.open("http://google.com")
 ```
 
-##### time
 ```python
+# time
 import time
 print(time.gmtime(0))
 print(time.localtime())
@@ -452,8 +455,8 @@ print(time.time())
 print(time.localtime().tm_year)
 ```
 
-##### timer
 ```python
+# timer
 from time import time as my_timer
 import random
 wait_time = random.randint(1, 6)
@@ -462,42 +465,42 @@ end_time = my_timer()
 print(time.strftime("%X", time.localtime(start_time)))
 ```
 
-##### timezone
 ```python
+# timezone
 import time
 print(time.strftime('%c', time.gmtime(0))
 print(time.tzname[0], time.timezone)
 print(time.strftime('%Y-%m-%d', time.localtime())
 ```
 
-##### datetime
 ```python
+# datetime
 import datetime
 print(datetime.datetime.today())
 print(datetime.datetime.now())
 ```
 
-##### user time
 ```python
+# user time
 from time import perf_counter
 start_time = perf_counter()
 end_time = perf_counter()
 ```
 
-##### ?
 ```python
+# ?
 from time import monotonic
 start_time = monotonic()
 end_time = monotonic()
 ```
 
-##### cpu time
 ```python
+# cpu time
 from time import process_time
 ```
 
-##### tkinter
 ```python
+# tkinter
 import tkinter
 print(tkinter,TkVersion)
 tkinter.text()
@@ -517,6 +520,7 @@ mainWindow.mainloop()
 #### EXIT CODE
 
 ```python
+# exit code
 from sys import exit
 exit(0)
 ```
