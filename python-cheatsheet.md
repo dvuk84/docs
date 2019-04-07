@@ -46,8 +46,8 @@ print("There are {0} days in {1}, {2} and {3}".format(31, "January", "March", "A
 print("N:w
 umber {0:2} squared is {1:4}".format(2, 2 ** 2))
 print("""string split
-across
-multiple lines""")
+         across
+         multiple lines""")
 ```
 
 <a name="FILES"></a>
@@ -57,11 +57,11 @@ multiple lines""")
 # file modes
 r - read (default)
 w - write
-x
+x - create new file
 a - append
 b - binary
 t - text (default)
-+
++ - update (read-write)
 ```
 
 ```python
@@ -94,8 +94,8 @@ from_file = "source.txt"
 to_file = "target.txt"
 
 in_file = open(from_file, 'r')
-indata = in_file.read()
-indata = in_file.readline()
+indata = in_file.read()         # read entire file as a string
+indata = in_file.readline()     # read line by line
 
 for line in in_file.lower():
     print(line, end='')
