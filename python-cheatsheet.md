@@ -376,7 +376,6 @@ import my_module
 my_module.apple()
 ```
 
-##### class
 ```python
 # class
 class MyClass(object):
