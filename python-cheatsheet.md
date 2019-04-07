@@ -15,11 +15,9 @@
 #### PRINTING, USER INPUT AND ARGUMENTS
 
 ```python
-from sys import argv
-```
-
-```python
 # argument
+from sys import argv
+
 first, second = argv
 print("This is your arg: "), second
 ```
@@ -32,13 +30,13 @@ like = raw_input(prompt)
 ```
 
 ```python
-# format
+# formating
 formatter = "%r %r %r"
 print formatter % ("one", "two", "three")
 ```
 
 ```python
-#printing
+# printing
 print("hello", name, "bye")
 print("hello" + name + "bye")
 print("hello %s %d", % (name, age))	# python 2
@@ -55,70 +53,77 @@ multiple lines""")
 <a name="FILES"></a>
 #### FILE HANDLING
 
-##### r (default), w, x, a, b, t (default), +
-
-##### read file
 ```python
+# file modes
+r - read (default)
+w - write
+x
+a - append
+b - binary
+t - text (default)
++
+```
+
+```python
+# read from file
 file = sample.txt
-txt = open(file, 'w')
+txt = open(file, 'r')
 print(txt.read())
 ```
 
-##### write to file
 ```python
+# write to file
+filename = sample.txt
+txt = open(filename, 'rw')
+
+text = "writing to a file"
+
+# either
 txt.truncate()
-txt.write("writing to a file\n")
+txt.write(text)
+
+# or
+print(name, file=filename)
+
 txt.close()
-
-```
-```python
-print(name, file=filename.txt)
 ```
 
-##### copy file
 ```python
+# copy file
 from_file = "source.txt"
 to_file = "target.txt"
-```
 
-```python
 in_file = open(from_file, 'r')
 indata = in_file.read()
 indata = in_file.readline()
-```
 
-```python
 for line in in_file.lower():
     print(line, end='')
-```
 
-```python
 out_file = open(to_file, 'w')
 out_file.write(indata)
-```
 
-```python
 out_file.close()
 in_file.close()
 ```
 
-##### print 5th line
 ```python
+# print 5th line
 def rewind(f):
     f.seek(5)
 
 rewind("file.txt")
 ```
 
-##### binary
 ```python
+# binary
 byte([age])
 age.to_bytes(2, 'big')
 e = int.from_bytes(bin_file(2), 'big'))
 ```
 
-##### pickle
 ```python
+# pickle
 import pickle
 imelda = ("More Mayhem", "Imelda May", (1, "Polling the Rug"))
 
@@ -126,8 +131,8 @@ with open("imelda.pickle", "wb") as pickle_file:
     pickle.dump(imelda, pickle_file)
 ```
 
-##### shelve
 ```python
+# shelve
 import shelve
 
 with shelve.open('Shelf.Test') as fruit:
