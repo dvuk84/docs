@@ -4,4 +4,5 @@
 **redis-sentinel** - how to set up Redis Sentinel with Failover  
 **r1soft-backups.md** - how to set up r1soft backups from scratch or migrate an existing setup  
 **upgrade-ios.md** - how to upgrade Cisco IOS  
-**upgrade-postgres-inplace.md** - how to upgrade Postgres 9.3 to 9.6 in place
+**upgrade-postgres-inplace.md** - how to upgrade Postgres 9.3 to 9.6 in place  
+**restrict-slon-access.md** - how to restrict access to slon_remote in Slony replication  
