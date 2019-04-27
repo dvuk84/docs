@@ -1,0 +1,6 @@
+cluster name = clustername;
+node 1 admin conninfo = 'dbname=maindb host=postgres1.domain.com user=slon_local password=abc123';
+node 2 admin conninfo = 'dbname=maindb host=replica0.domain.com user=slon_remote password=abc123';
+#node 3 admin conninfo = 'dbname=maindb host=replica1.domain.com user=slon_remote password=abc123';
+
+init cluster ( id=1, comment = 'Master Node');

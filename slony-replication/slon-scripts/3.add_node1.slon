@@ -1,0 +1,8 @@
+cluster name = clustername;
+node 1 admin conninfo = 'dbname=maindb host=postgres1.domain.com user=slon_local password=abc123';
+node 2 admin conninfo = 'dbname=maindb host=replica0.domain.com user=slon_remote password=abc123';
+#node 3 admin conninfo = 'dbname=maindb host=replica1.domain.com user=slon_remote password=abc123';
+
+store node (id=2, comment = 'REPLICA0', event node=1);
+store path (server = 1, client = 2, conninfo='dbname=maindb host=postgres1.domain.com user=slon_remote password=abc123');
+store path (server = 2, client = 1, conninfo='dbname=maindb host=replica0.domain.com user=slon_remote password=abc123');

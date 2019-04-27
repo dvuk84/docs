@@ -1,0 +1,8 @@
+cluster name = clustername;
+node 1 admin conninfo = 'dbname=maindb host=postgres1.domain.com user=slon_local password=abc123';
+node 2 admin conninfo = 'dbname=maindb host=replica0.domain.com user=slon_remote password=abc123';
+#node 3 admin conninfo = 'dbname=maindb host=replica1.domain.com user=slon_remote password=abc123';
+
+create set (id=1, origin=1, comment='Description');
+set add table (set id=1, origin=1, id=1, fully qualified name = 'public.table1', comment='Table 1');
+set add table (set id=1, origin=1, id=2, fully qualified name = 'public.table2', comment='Table 2');
