@@ -50,4 +50,25 @@ This document will show how to upgrade Postgres 9.3 to 9.6. It's an in-place upg
   apt-get remove postgresql-9.3 postgresql-9.3-slony1-2 postgresql-client-9.3
   dpkg --purge postgresql-9.3
   rm -rf /var/lib/postgresql/9.3
-  ```
+
+# POST-MORTEM
++00:02 stop web servers
+--00:15 start upgrade
+--00:38 stop upgrade
+---00:50 start rsync
+----01:23 start analyze
+----01:30 stop analyze
++01:42 start web server
+---01:51 stop rsync
+
+Even though you stop postgres daemons on both master and slave around the same time, the /var/lib/postgresql/9.6/main/base content will differ. That causes replication to fail with the error:
+
+2018-07-11 00:47:44 BST [28741-1] FATAL:  database system identifier differs between the primary and standby
+2018-07-11 00:47:44 BST [28741-2] DETAIL:  The primary's identifier is 4802984902834972398, the standby's identifier is 2398093782489798767.
+
+The easiest and least intrusive way to sync them is to use rsync, but it's not the fastest when you're dealing with hundreds
+of GB of data. To avoid bringing the master up and then having to take a base backup and trying to catch up with the master
+from the standby, I've decided to rather rsync files across and prolong the downtime a little bit. I could've avoided the
+extra downtime as it was not necessary to extend, but it sped things up and I brought the standby up and running in less time
+than I would otherwise. I've done this on staging, have planned for it in production and it worked as expected.
+```
