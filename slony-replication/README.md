@@ -1,4 +1,8 @@
-This document will explain how to set up Slony replication with Postgres.
+This document will explain how to set up Slony replication with Postgres replication. Setup is the following:
+
+postgres-master -> postgres-slave  
+postgres-master -> replicas
+
 ```
 **** 1
 - build Master and Slave Postgres servers
