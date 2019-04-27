@@ -1,4 +1,4 @@
-This document explains how to set up Redis replication and failover with Sentinel on Instantsite.
+This document explains how to set up Redis replication and failover with Sentinel on three database instances.
 
 ## **INFO**
 
