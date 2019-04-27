@@ -1,0 +1,8 @@
+# public port IP
+bind 172.31.0.3
+port 16379
+
+# redis cluster name and master IP
+sentinel monitor redis-cluster 172.31.0.1 6379 2
+sentinel down-after-milliseconds redis-cluster 5000
+sentinel failover-timeout redis-cluster 10000
