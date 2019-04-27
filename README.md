@@ -6,3 +6,4 @@
 **upgrade-ios.md** - how to upgrade Cisco IOS  
 **upgrade-postgres-inplace.md** - how to upgrade Postgres 9.3 to 9.6 in place  
 **restrict-slon-access.md** - how to restrict access to slon_remote in Slony replication  
+**slony-replication** - how to set up Slony replication with Postgres
