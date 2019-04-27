@@ -38,8 +38,8 @@ This document will show how to upgrade Postgres 9.3 to 9.6. It's an in-place upg
 * start the new server (start master first, then standby) and verify version with psql -c "SELECT version();"
 * create a test database and see if replication works, if it doesn't and the databases are different, stop standby and rsync the files across
   rsync -avr postgres1.domain.com:/var/lib/postgresql/9.6/main/ /var/lib/postgresql/9.6/main
-* run vacuum and analyze on lcn database
-  /usr/lib/postgresql/9.6/bin/vacuumdb --dbname lcn --analyze-in-stages
+* run vacuum and analyze on your database
+  /usr/lib/postgresql/9.6/bin/vacuumdb --dbname <DATABASE> --analyze-in-stages
 
 ---- POST-UPGRADE
 * start Slony cluster
