@@ -1,5 +1,5 @@
 This document will explain how to set up Slony replication with Postgres.
-
+```
 **** 1
 - build Master and Slave Postgres servers
 - build Replica servers you want to replicate tables to from the Postgres server
@@ -92,3 +92,4 @@ $SLONY_SETS = {
 Every time an UPDATE or DELETE statement is executed, Postgres will update the record by creating a new copy of the row and leaving the 
 old one behind as a dead row or dead tuple. So when a transaction is to be commited, if it aborts before it finished then then old row should be restored and the new
 one removed and if it's successfull then the new one will be used and and old one will be removed. That's what MVCC type database engine is. Vacuum removes these dead rows and releases space for new ones.
+```
