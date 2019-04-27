@@ -20,7 +20,8 @@ This document will show how to upgrade Postgres 9.3 to 9.6. It's an in-place upg
 * stop postgresql again
 * copy /etc/postgresql/9.3/main/postgresql.conf to /etc/postgresql/9.6/main/postgresql.conf
 * copy /etc/postgresql/9.3/main/pg_hba.conf to etc/postgresql/9.6/main/pg_hba.conf
-* modify /etc/postgresql/9.6/main/postgresql.conf and comment out checkpoint_segments and add min_wal_size = 5 and max_wal_size = 10 and also make sure to update any references to 9.3 !!!
+* modify /etc/postgresql/9.6/main/postgresql.conf and comment out checkpoint_segments and add min_wal_size = 5 and
+  max_wal_size = 10 and also make sure to update any references to 9.3 !!!
 * link both config files as pg_upgrade will be looking in /var and not /etc
   ln -s /etc/postgresql/9.3/main/postgresql.conf /var/lib/postgresql/9.3/main/
   ln -s /etc/postgresql/9.6/main/postgresql.conf /var/lib/postgresql/9.6/main/
@@ -61,7 +62,8 @@ This document will show how to upgrade Postgres 9.3 to 9.6. It's an in-place upg
 +01:42 start web server
 ---01:51 stop rsync
 
-Even though you stop postgres daemons on both master and slave around the same time, the /var/lib/postgresql/9.6/main/base content will differ. That causes replication to fail with the error:
+Even though you stop postgres daemons on both master and slave around the same time, the /var/lib/postgresql/9.6/main/base
+content will differ. That causes replication to fail with the error:
 
 2018-07-11 00:47:44 BST [28741-1] FATAL:  database system identifier differs between the primary and standby
 2018-07-11 00:47:44 BST [28741-2] DETAIL:  The primary's identifier is 4802984902834972398, the standby's identifier is 2398093782489798767.
