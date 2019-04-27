@@ -269,5 +269,5 @@ And on a Replica we can see it has been elected as the new Master:
 2985:X 13 Nov 14:05:56.273 # -sdown slave 172.31.0.3:6379 172.31.0.3 6379 @ redis-cluster 172.31.0.1 6379
 ```
 
-At this point the sentinel.conf has been updated by Sentinel and shouldn't be edited again. Note the "sdown" which means the node doesn't ping and has
-been marked as down and once everyone in a cluster agrees that they can't reach it the state will change to "odown" which is kind of a soft/hard down.
+At this point the sentinel.conf has been updated by Sentinel and shouldn't be edited again. Note the **sdown** which means the node doesn't ping and has
+been marked as down and once everyone in a cluster agrees that they can't reach it the state will change to **odown** which is kind of a soft/hard down.
